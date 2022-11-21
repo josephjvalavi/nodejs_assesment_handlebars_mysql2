@@ -64,13 +64,13 @@
             <div class="box1">
                 <div class="form1">
                     <p style="color:rgb(4, 4, 4);margin-left: 45px;font-size: 20px;">Login Please</p>
-                    <form name="loginform" id="loginform" >
+                    <form name="loginform" id="loginform" method="Post" action="/booking.hbs" >
                         <label for="fname">Username:</label><br>
                         <input type="email" id="username" name="fname" minlength="4" maxlength="25" required><br>
                         <label for="lname">Password:</label><br>
                         <input type="password" id="password" name="lname" minlength="5" maxlength="25" required><br><br>
                         <span id="success"></span>
-                        <input type="submit" id="btn-login" name="btn-login" value="Login" onclick=" return check(event)"
+                        <input type="submit" id="btn-login" name="btn-login" value="Login" 
                             style="width:190px;background-color: rgb(38, 78, 146);color: white;">
                     </form>
                 </div>
