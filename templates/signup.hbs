@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(8, 112, 236);
+            background: radial-gradient(circle, rgba(8, 112, 236, 1) 0%, rgba(38, 154, 139, 1) 100%);
+        }
+
+        .parent {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .s1 {
+            width: 35vw;
+            height: 65vh;
+            background-image: url(https://media.istockphoto.com/id/503152697/vector/pasenger-plane-over-the-clouds.jpg?s=612x612&w=is&k=20&c=4OFJbZUQktZFMCLrFX6vzMCwgJ_rgqmGExDCKE-ikMc=);
+            margin: 0%
+        }
+
+        .cen {
+            width: 80vw;
+            height: 65vh;
+            border: 2px solid;
+            display: flex;
+            justify-content: flex-start;
+            background-color: azure;
+
+
+        }
+
+        .fo {
+            height: 65vh;
+            width: 45vw;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-control {
+            border-color: black;
+            border-radius: 8px;
+            justify-content: center;
+            display: flex;
+            width: 35vw;
+            height: 5vh;
+            align-items: center;
+
+
+        }
+
+        .container-fluid {
+            display: flex;
+            justify-content: center;
+        }
+        .but{
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+    {{>navbar}}
+    
+    <div class="parent">
+
+        <div class="cen">
+            <div class="s1">
+
+            </div>
+            <div class="fo">
+                <div class="container-fluid" style="min-height: 65vh;width: 45vw; color: rgb(51, 80, 170);">
+                    <div class="row">
+                        <!-- <div class="col-sm-3 bg-primary"></div> -->
+                        <div class="col-sm-6 offset-sm-3">
+                            <h1 class="text-center">Signup</h1>
+
+                            <form name="signupform" id="signupform" onsubmit="validate(event)" method="post">
+                                <div>
+                                    <label>Name</label>
+                                    <input type="text" name="firstname" class="form-control" placeholder="fName" minlength="5"
+                                        maxlength="50" required>
+                                </div>
+                                <label>lastName</label>
+                                    <input type="text" name="lastname" class="form-control" placeholder="lName" minlength="5"
+                                        maxlength="50" required>
+                                </div>
+                                <div>
+                                    <label>Email</label>
+                                    <input type="email" name="email" class="form-control" placeholder="me@example.com"
+                                        minlength="5" maxlength="50" required>
+                                </div>
+                                <div>
+                                    <label>phone</label>
+                                    <input type="text" name="phone" class="form-control" placeholder="phonennumber"
+                                        minlength="10" maxlength="10" required>
+                                </div>
+                                <div>
+                                    <label>Password</label>
+                                    <input type="password" name="password" class="form-control" minlength="8"
+                                        maxlength="25" required>
+                                </div>
+                                <div>
+                                    <label>Confirm Password</label>
+                                    <input type="password" name="cpassword" class="form-control" minlength="8"
+                                        maxlength="25" required>
+                                </div>
+
+                                <div class="d -grid mt-3">
+                <button class="btn btn-primary">Signup</button>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    </div>

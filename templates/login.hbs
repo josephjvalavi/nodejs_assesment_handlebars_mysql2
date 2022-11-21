@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(https://media.istockphoto.com/id/1215397482/vector/traffic-logistics-travel.jpg?s=612x612&w=0&k=20&c=3cFAvkLXieEMR7VkM2AIuWYZZbmaRHIR6l2cSmr6F3k=);
+        }
+
+        .main {
+            margin-top: 50px;
+            margin-left: 135px;
+            height: 500px;
+            width: 1000px;
+            background-color: rgb(196, 118, 118);
+
+        }
+
+        .container2 {
+            display: flex;
+            border-color: black;
+            background-color: rgb(213, 219, 214);
+            background-image: url(https://media.istockphoto.com/id/1355304328/vector/air-travel-background-airfare-cities-of-the-world-airport-departures-and-arrivals.jpg?s=612x612&w=is&k=20&c=gR7CV9JiEHZw_32tBssZ9WqGl9ImA6_fE1OTu3cw1cU=);
+
+        }
+
+        .box1 {
+            width: 400px;
+            height: 450px;
+            background-image: url();
+            
+
+        }
+
+        .box2 {
+            width: 600px;
+            height: 444px;
+
+        }
+
+        .form1 {
+            margin-top: 100px;
+            margin-left: 150px;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="main">
+        <div class="container2">
+            <div class="box1">
+                <div class="form1">
+                    <p style="color:rgb(4, 4, 4);margin-left: 45px;font-size: 20px;">Login Please</p>
+                    <form name="loginform" id="loginform" >
+                        <label for="fname">Username:</label><br>
+                        <input type="email" id="username" name="fname" minlength="4" maxlength="25" required><br>
+                        <label for="lname">Password:</label><br>
+                        <input type="password" id="password" name="lname" minlength="5" maxlength="25" required><br><br>
+                        <span id="success"></span>
+                        <input type="submit" id="btn-login" name="btn-login" value="Login" onclick=" return check(event)"
+                            style="width:190px;background-color: rgb(38, 78, 146);color: white;">
+                    </form>
+                </div>
+            </div>
+            <div class="box2"><img src="https://media.istockphoto.com/id/1168241429/vector/aircraft-flight-a-curved-path-to-location-mark-plane-route-line-tourism-and-travel.jpg?s=612x612&w=0&k=20&c=w3UIgH-MZzU-23xEOMxTt72L3B4zQ0uknzjOD1g3nf0=" style="width:500px;height:400px;margin-top:40px;margin-left:100px;">
+            </div>
+        </div>
+        </div>
