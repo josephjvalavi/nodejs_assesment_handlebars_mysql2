@@ -50,7 +50,41 @@ req.on('end',function(){
 else if(page=='/login' && req.method=='GET'){
     let context= renderTemplates('login')
     res.end(context)
-}    
+} 
+else if(page=='/login' && req.method=='POST'){
+    
+    let formData='';
+req.on('data',(res)=>{
+    formData+=res.toString();
+}
+)
+req.on('end',function(){
+let userdata = qs.parse(formData);
+flight.check(userdata.email,userdata.password,(err,result)=>{
+    var context ={
+        result:{
+        success:true,
+        error:[]
+    }}
+    if(err){
+
+        console.log('ERRRRRRRRRRRRRRR',err)
+        context.result.success=false;
+        
+
+        
+    }
+    else{
+    let t = renderTemplates('booking',context);
+        res.end(t);
+
+    }
+})
+
+})
+}
+
+
 });
 server.listen(80)
 function renderTemplates(name){
