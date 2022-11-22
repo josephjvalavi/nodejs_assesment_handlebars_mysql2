@@ -49,38 +49,55 @@ req.on('end',function(){
 
 })
 }
-else if(page=='/login' && req.method=='GET'){
-    let context= renderTemplates('login')
+
+else if(page=='/booking' && req.method=='get'){
+    console.log("gisdugdudfvshikf")
+    let context= renderTemplates('booking')
     res.end(context)
 } 
-
 else if(page=='/login' && req.method=='POST'){
+    console.log("qwertyuioxfghjkl;")
+    // res.writeHead(302, {
+    //     location: "/booking",
+    //   });
+      res.end();
+}
+   
+
+
     let formData='';
 req.on('data',(res)=>{
     formData+=res.toString();
-});
+    console.log(formData)
+}
+)
 req.on('end',function(){
 let userdata = qs.parse(formData);
-var context ={
-    result:{
-    success:true,
-    error:[]
-}}
+// flight.check(userdata.email,userdata.password,(err,result)=>{
+//     var context ={
+//         result:{
+//         success:true,
+//         error:[]
+//     }}
+//     if(err){
 
-    let t = renderTemplates('login',context);
-        res.end(t);
+//         console.log('ERRRRRRRRRRRRRRR',err)
+//         context.result.success=false;
+        
+
+        
+//     }
+//     else{
+//     let t = renderTemplates('login',context);
+//         res.end(t);
+
+//     }
+// })
+
 })
-}
 
-else if(page=='/booking' && req.method=='POST'){
-    console.log("gisdugdudfvshikf") 
-    let context= renderTemplates('booking')
-    res.end(context)
-}
+
 });
-
-
-
 server.listen(80)
 
 function renderTemplates(name){
